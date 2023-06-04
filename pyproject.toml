@@ -9,6 +9,7 @@ packages = [{include = "python_django_blog"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^4.2.1"
+flake8 = "^6.0.0"
 
 
 [build-system]
