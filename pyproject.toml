@@ -10,6 +10,7 @@ packages = [{include = "python_django_blog"}]
 python = "^3.11"
 django = "^4.2.1"
 flake8 = "^6.0.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

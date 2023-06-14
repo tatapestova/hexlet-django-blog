@@ -1,11 +1,20 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.views.generic import TemplateView
 
 
-def index(request):
-    return render(request, 'index.html', context={
-        'who': 'World',
-    })
+class IndexView(TemplateView):
 
+    template_name = 'index.html'
+
+    def get(self, request, *args, **kwargs):
+        # return redirect(reverse('article', kwargs={'article_id': 42, 'tags': 'python'}))
+        return render(
+        request,
+        'index.html',
+        context={'who': 'Tata'},
+    )
 
 def about(request):
     tags = ['обучение', 'программирование', 'python', 'oop']
